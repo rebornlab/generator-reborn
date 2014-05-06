@@ -360,7 +360,7 @@ module.exports = function(grunt) {
     grunt.task.run(['connect:test', 'mocha']);
   });
   // DESC: grunt build
-  grunt.registerTask('build', ['clean:dev', 'htmlbuild:dev', 'useminPrepare', 'concurrent:prod', 'concat', 'cssmin', 'uglify', 'usemin', 'concurrent:postProd']);
+  grunt.registerTask('build', ['clean:prod', 'htmlbuild:dev', 'useminPrepare', 'concurrent:prod', 'concat', 'cssmin', 'uglify', 'usemin', 'concurrent:postProd']);
   // DESC: grunt default task
   grunt.registerTask('default', ['newer:jshint', 'test', 'build']);
 };
