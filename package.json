@@ -4,11 +4,11 @@
   "description": "Generator for custom site build. Made by Reborn - Creative Lab",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "mciastek/generator-reborn",
+  "repository": "https://github.com/rebornlab/generator-reborn.git",
   "author": {
-    "name": "",
+    "name": "REBORN - Mirosław Ciastek",
     "email": "",
-    "url": "https://github.com/mciastek"
+    "url": "https://github.com/rebornlab"
   },
   "engines": {
     "node": ">=0.10.0"
