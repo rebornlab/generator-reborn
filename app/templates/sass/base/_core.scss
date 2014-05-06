@@ -1,0 +1,57 @@
+/*
+*  ============================
+*
+*    [Table of contents]
+*
+*    1. Html, body
+*    2. Page structure
+*    3. Additional reset
+*
+*  ============================
+*/
+
+//============================
+//  [1. Html, body]
+//============================
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: $normal-white;
+  font: 15px/1.33em 'klavika', Arial, sans-serif;
+  font-weight: 300;
+  color: $light-gray;
+}
+
+//============================
+//  [2. Page structure]
+//============================
+
+// apply a natural box layout model to all elements
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+//============================
+//  [3. Additional reset]
+//============================
+
+input {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}

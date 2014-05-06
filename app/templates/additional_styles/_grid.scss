@@ -1,0 +1,77 @@
+/*
+*  ============================
+*
+*    [Table of contents]
+*
+*    1. Grid functions & mixins
+*    2. Grid classes
+*
+*  ============================
+*/
+
+//=============================
+//  [1. Grid functions & mixins]
+//=============================
+
+/*
+*  ============================
+*
+*    [Grid system]
+*
+*    Simple grid system based
+*    on Bourbon flex grid
+*    @source: http://bit.ly/1fAXJzH
+*
+*
+*  ============================
+*/
+
+
+
+// Flexible grid
+@function flex-grid($columns, $container-columns: $fg-max-columns) {
+  $width: $columns * ($fg-column + $fg-gutter * 2);
+  $container-width: $container-columns * ($fg-column + $fg-gutter * 2);
+  @return percentage($width / $container-width);
+}
+
+// Flexible gutter
+@function flex-gutter($container-columns: $fg-max-columns, $gutter: $fg-gutter) {
+  $container-width: $container-columns * ($fg-column + $fg-gutter * 2);
+  @return percentage($gutter / $container-width);
+}
+
+// Grid settings
+$fg-column: 64px;
+$fg-gutter: 10px;
+$fg-max-columns: 12;
+
+//=============================
+//  [2. Grid classes]
+//=============================
+
+.row {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+}
+
+.column {
+  float: left;
+}
+
+// *** Build grid ***
+@for $i from 1 through $fg-max-columns {
+  .col-#{$i} {
+    width: flex-grid($i);
+      padding: 0 flex-gutter();
+  }
+}
+
+// *** No gutter ***
+.row.no-gutter {
+ .column {
+   padding: 0;
+ }
+}

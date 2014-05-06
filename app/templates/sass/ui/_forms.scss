@@ -1,0 +1,91 @@
+/*
+*  ============================
+*
+*    [Table of contents]
+*
+*    1. Placeholder mixin
+*    2. Form base
+*
+*  ============================
+*/
+
+//============================
+//
+//  [1. Placeholder mixin]
+//  @source: 
+//  http://bit.ly/1iz1oTK
+//
+//============================
+
+@mixin placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+
+//============================
+//  [2. Form base]
+//============================
+
+// *** text inputs ***
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+// fallback for older browsers
+.input {
+  // styles for normal state
+  &:hover {
+    // styles for :hover state
+  }
+  &:focus {
+    // styles for :focus state
+  }
+  @include placeholder {
+
+  }
+  .placeholder {
+    
+  }
+}
+
+// *** html5 inputs & pickers ***
+input[type=color],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=month],
+input[type=time],
+input[type=week],
+// fallback for older browsers
+.input-html5 {
+  // styles for normal state
+  &:hover {
+    // styles for :hover state
+  }
+  &:focus {
+    // styles for :focus state
+  }
+}
+
+// *** form buttons ***
+input[type=button],
+input[type=reset],
+input[type=submit],
+// fallback for older browsers
+.form-btn {
+	@include btn-base;
+	  // styles for normal state
+  &:hover {
+    // styles for :hover state
+  }
+  &:focus {
+    // styles for :focus state
+  }
+}

@@ -1,0 +1,50 @@
+/*
+*  ============================
+*
+*    [Table of contents]
+*
+*    1. Headers
+*    2. Lists
+*    3. Links
+*    4. Other typo
+*
+*  ============================
+*/
+
+//=============================
+//  [1. Headers]
+//=============================
+
+h1 {
+  color: $dark-gray;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+//=============================
+//  [2. Lists]
+//=============================
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    color: $dark-gray;
+  }
+}
+
+//=============================
+//  [3. Links]
+//=============================
+
+a {
+  color: $dark-gray;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px dotted $dark-gray;
+  &:hover {
+    border-bottom: none;
+  }
+}

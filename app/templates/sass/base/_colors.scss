@@ -1,0 +1,58 @@
+/*
+*  ============================
+*
+*    [Table of contents]
+*
+*    1. Color palette
+*    2. Primary palette
+*    3. Gradient function
+*
+*  ============================
+*/
+
+/*
+*  ============================
+*
+*    [Color palette]
+*
+*    --- Content backgrounds ---
+*    Background: $normal-white
+*
+*    --- Typography ---
+*    Content text: $light-gray
+*    Header (h1): $dark-gray
+*    Links (all type): $dark-gray
+*    List items: $dark-gray
+*
+*  ============================
+*/
+
+//=============================
+//	[2. Primary palette]
+//=============================
+
+$normal-white: #fff;
+$light-gray: #a8a8a8;
+$dark-gray: #353535;
+
+//=============================
+//	[3. Gradient function]
+//
+//  @source: 
+//  http://bit.ly/1e7uBDD
+//
+//=============================
+
+@function linear-gradient($pos, $gradients...) {
+  $type: linear;
+  $pos-type: type-of(nth($pos, 1));
+
+  // if $pos doesn't exist, fix $gradient
+  @if ($pos-type == color) or (nth($pos, 1) == "transparent")  {
+    $gradients: zip($pos $gradients);
+    $pos: false;
+  }
+
+  $type-gradient: $type, $pos, $gradients;
+  @return $type-gradient;
+}

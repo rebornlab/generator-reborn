@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>My Style Guide Base CSS</title>
+    <link rel="shortcut icon" href="static/brick.png" />
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="static/css/doc.css">
+    <link rel="stylesheet" href="static/css/github.css">
+
+    <!-- CSS to be documented -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <link rel="stylesheet" href="../build/css/screen.css">
+
+    <!-- Main libraries -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+
+    <script src="../../assets/jquery.uniform/jquery.uniform.min.js"></script>
+    <script src="../../assets/select2/select2.min.js"></script>
+    
+    <!-- component js and init scripts -->
+    <script src="../../scripts/main.js"></script>
+
+</head>
+
+  <body>
+    <header class="header pbn" role="banner">
+      <div class="backgroundHighlight typeReversed1">
+        <div class="container">
+          <h1 class="h2 mvs">My Style Guide</h1>
+        </div>
+      </div>
+      <div class="backgroundLowlight typeReversed1">
+        <div class="container">
+          <span>
+            <ul class="docNav listInline">
+              <!-- Add you pages here -->
+              <li><a href="index.html">Intro</a></li>
+              <li><a href="base_css.html">Base CSS</a></li>
+              <li><a href="ui.html">UI</a></li>
+            </ul>
+          </span>
+        </div>
+      </div>
+      <!-- //header/container -->
+    </header>
+
+    <div class="content">
+      <section>
+        <div class="line">
+
+          <div class="col cols4">
+            <div class="componentMenu box boxBasic backgroundBasic">
+              <div class="boxBody pan">
+                <ul class="componentList listBorderedHover">
+                   
+                    <li><a href="#background">Paleta kolorów</a></li>
+                   
+                    <li><a href="#typography">Typografia</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="main col cols20 lastCol example-main">
+
+
+
+<h1 id="background">Paleta kolorów</h1>
+
+<p>Poniżej znajduje się paleta kolorów, które zostały użyte na stronie wraz z ich nazwami.</p>
+
+<table><thead>
+<tr>
+<th>Nazwa</th>
+<th>Kolor</th>
+<th>Nazwa</th>
+<th>Kolor</th>
+<th>Nazwa</th>
+<th>Kolor</th>
+<th>Nazwa</th>
+<th>Kolor</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>normal-white</td>
+<td><div class="bg-color normal-white"></div></td>
+<td>darker-white</td>
+<td><div class="bg-color darker-white"></div></td>
+<td>light-gray</td>
+<td><div class="bg-color light-gray"></div></td>
+<td>dark-gray</td>
+<td><div class="bg-color dark-gray"></div></td>
+</tr>
+<tr>
+<td>gray-darker</td>
+<td><div class="bg-color gray-darker"></div></td>
+<td>gray</td>
+<td><div class="bg-color gray"></div></td>
+<td>latte-brown-lighter</td>
+<td><div class="bg-color latte-brown-lighter"></div></td>
+<td>latte-brown</td>
+<td><div class="bg-color latte-brown"></div></td>
+</tr>
+<tr>
+<td>latte-brown-darker</td>
+<td><div class="bg-color latte-brown-darker"></div></td>
+<td>latte-brown-dark</td>
+<td><div class="bg-color latte-brown-dark"></div></td>
+<td>cream-very-light</td>
+<td><div class="bg-color cream-very-light"></div></td>
+<td>cream-light</td>
+<td><div class="bg-color cream-light"></div></td>
+</tr>
+<tr>
+<td>cream-lighter</td>
+<td><div class="bg-color cream-lighter"></div></td>
+<td>cream</td>
+<td><div class="bg-color cream"></div></td>
+<td>cream-darker</td>
+<td><div class="bg-color cream-darker"></div></td>
+<td>cream-dark</td>
+<td><div class="bg-color cream-dark"></div></td>
+</tr>
+<tr>
+<td>sky-blue</td>
+<td><div class="bg-color sky-blue"></div></td>
+<td>sky-blue-darker</td>
+<td><div class="bg-color sky-blue-darker"></div></td>
+<td>grayish-blue-lighter</td>
+<td><div class="bg-color grayish-blue-lighter"></div></td>
+<td>grayish-blue</td>
+<td><div class="bg-color grayish-blue"></div></td>
+</tr>
+<tr>
+<td>grayish-blue-darker</td>
+<td><div class="bg-color grayish-blue-darker"></div></td>
+<td>grayish-blue-darkerer</td>
+<td><div class="bg-color grayish-blue-darkerer"></div></td>
+<td>grayish-blue-dark</td>
+<td><div class="bg-color grayish-blue-dark"></div></td>
+<td>grayish-blue-blacker</td>
+<td><div class="bg-color grayish-blue-blacker"></div></td>
+</tr>
+<tr>
+<td>grayish-blue-black</td>
+<td><div class="bg-color grayish-blue-black"></div></td>
+<td>bloody-red</td>
+<td><div class="bg-color bloody-red"></div></td>
+<td>pinky-red</td>
+<td><div class="bg-color pinky-red"></div></td>
+<td>btn-str-brown</td>
+<td><div class="bg-color btn-str-brown"></div></td>
+</tr>
+<tr>
+<td>tea-green</td>
+<td><div class="bg-color tea-green"></div></td>
+<td>fruit-orange</td>
+<td><div class="bg-color fruit-orange"></div></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2>Style backgroundów</h2>
+
+<table><thead>
+<tr>
+<th>Header</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><div class="red-box"><h1>Header 1</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, aliquam, iusto, ipsa.</p></div></td>
+<td><code>red-box</code></td>
+</tr>
+<tr>
+<td><div class="blue-box"><h1>Header 1</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, aliquam, iusto, ipsa.</p></div></td>
+<td><code>blue-box</code></td>
+</tr>
+<tr>
+<td><div class="dblue-box"><h1>Header 1</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, aliquam, iusto, ipsa.</p></div></td>
+<td><code>dblue-box</code></td>
+</tr>
+<tr>
+<td><div class="lcream-box"><h1>Header 1</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, aliquam, iusto, ipsa.</p></div></td>
+<td><code>lcream-box</code></td>
+</tr>
+<tr>
+<td><div class="cream-box"><h1>Header 1</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, aliquam, iusto, ipsa.</p></div></td>
+<td><code>cream-box</code></td>
+</tr>
+<tr>
+<td><div class="white-box"><h1>Header 1</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, aliquam, iusto, ipsa.</p></div></td>
+<td><code>white-box</code></td>
+</tr>
+</tbody></table>
+
+<h1 id="typography">Typografia</h1>
+
+<h2>Przykładowy układ tekstu</h2>
+<div class="codeExample"><div class="exampleOutput">    <h1>Header1</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    <a href="#">Accusantium</a>, itaque, vel, saepe nulla dolorem nostrum aliquam impedit sit 
+    ratione minima vero adipisci excepturi asperiores deserunt tenetur eligendi sapiente nemo! Hic.</p>
+    <h2>Header2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Accusantium, itaque, vel, saepe nulla dolorem nostrum aliquam impedit sit 
+    ratione minima <strong>vero adipisci excepturi</strong> asperiores deserunt tenetur eligendi sapiente nemo! Hic.</p>
+    <h3>Header3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Accusantium, itaque, vel, saepe nulla dolorem nostrum aliquam impedit sit 
+    ratione minima vero adipisci excepturi asperiores deserunt tenetur eligendi sapiente nemo! Hic.</p>
+</div><div class="codeBlock"><div class="highlight"><pre>    <span class="nt">&lt;h1&gt;</span>Header1<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Accusantium<span class="nt">&lt;/a&gt;</span>, itaque, vel, saepe nulla dolorem nostrum aliquam impedit sit 
+    ratione minima vero adipisci excepturi asperiores deserunt tenetur eligendi sapiente nemo! Hic.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Header2<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Accusantium, itaque, vel, saepe nulla dolorem nostrum aliquam impedit sit 
+    ratione minima <span class="nt">&lt;strong&gt;</span>vero adipisci excepturi<span class="nt">&lt;/strong&gt;</span> asperiores deserunt tenetur eligendi sapiente nemo! Hic.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>Header3<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Accusantium, itaque, vel, saepe nulla dolorem nostrum aliquam impedit sit 
+    ratione minima vero adipisci excepturi asperiores deserunt tenetur eligendi sapiente nemo! Hic.<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div>
+<h2>Style dla nagłówków</h2>
+
+<table><thead>
+<tr>
+<th>Header</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><h1>Header 1</h1></td>
+<td><code>h1</code></td>
+</tr>
+<tr>
+<td><h2>Header 2</h2></td>
+<td><code>h2</code></td>
+</tr>
+<tr>
+<td><h3>Header 3</h3></td>
+<td><code>h3</code></td>
+</tr>
+<tr>
+<td><h2 class="h-decor">Header decor</h2></td>
+<td><code>h-decor</code></td>
+</tr>
+</tbody></table>
+
+<h2>Blockquote</h2>
+<div class="codeExample"><div class="exampleOutput">    <blockquote>
+        <p>Podziękowanie pragnę wyrazić także wszystkim wiernym, którzy  w tym okresie przekazali mi świadectwo swej niezmiennej wierności względem Następcy Piotra. Niech Pan strzeże nas wszystkich i  prowadzi drogą pokoju.</p>
+    <footer><small>( Benedykt XVI, 10 marca 2009 )</small></footer>
+    </blockquote>
+</div><div class="codeBlock"><div class="highlight"><pre>    <span class="nt">&lt;blockquote&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Podziękowanie pragnę wyrazić także wszystkim wiernym, którzy  w tym okresie przekazali mi świadectwo swej niezmiennej wierności względem Następcy Piotra. Niech Pan strzeże nas wszystkich i  prowadzi drogą pokoju.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;footer&gt;&lt;small&gt;</span>( Benedykt XVI, 10 marca 2009 )<span class="nt">&lt;/small&gt;&lt;/footer&gt;</span>
+    <span class="nt">&lt;/blockquote&gt;</span>
+</pre></div></div></div>
+<h2>Style dla list</h2>
+
+<table><thead>
+<tr>
+<th>Header</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><ul><li>Pomoc Kościołowi</li><li>Organizacja Koła Pomocy</li></ul></td>
+<td><code>ul</code></td>
+</tr>
+<tr>
+<td><ul class="ul-disc"><li>Pomoc Kościołowi</li><li>Organizacja Koła Pomocy</li></ul></td>
+<td><code>ul-disc</code></td>
+</tr>
+<tr>
+<td><ul class="ul-check"><li>Pomoc Kościołowi</li><li>Organizacja Koła Pomocy</li></ul></td>
+<td><code>ul-check</code></td>
+</tr>
+</tbody></table>
+
+<h2>Tabela</h2>
+<div class="codeExample"><div class="exampleOutput"><div class="text-page">
+    <table>
+        <thead>
+            <tr class="row-cntr">
+                <td class="first">Patron</td>
+                <td>Data</td>
+                <td>Godzina</td>
+                <td class="last">Miejsce</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first cell-lft">abp. Stanisaw Dziwisz</td>
+                <td>14.02.2014</td>
+                <td>19:00</td>
+                <td class="last cell-lft">Kościół pw. św. Krzyża w Warszawie</td>
+            </tr>
+            <tr>
+                <td class="first cell-lft">Bededykt XVI</td>
+                <td>14.02.2014</td>
+                <td>19:00</td>
+                <td class="last cell-lft">Kościół pw. św. Krzyża w Warszawie</td>
+            </tr>
+            <tr>
+                <td class="first cell-lft">Ojciec Franciszek</td>
+                <td>14.02.2014</td>
+                <td>19:00</td>
+                <td class="last cell-lft">Góra Kalwaria</td>
+            </tr>
+            <tr>
+                <td class="first cell-lft">bł. ks. Jerzy Popiełuszko</td>
+                <td>-</td>
+                <td>19:00</td>
+                <td class="last cell-lft">Watykan</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;text-page&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table&gt;</span>
+        <span class="nt">&lt;thead&gt;</span>
+            <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">&quot;row-cntr&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;first&quot;</span><span class="nt">&gt;</span>Patron<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>Data<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>Godzina<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;last&quot;</span><span class="nt">&gt;</span>Miejsce<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/thead&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;first cell-lft&quot;</span><span class="nt">&gt;</span>abp. Stanisaw Dziwisz<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>14.02.2014<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>19:00<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;last cell-lft&quot;</span><span class="nt">&gt;</span>Kościół pw. św. Krzyża w Warszawie<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;first cell-lft&quot;</span><span class="nt">&gt;</span>Bededykt XVI<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>14.02.2014<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>19:00<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;last cell-lft&quot;</span><span class="nt">&gt;</span>Kościół pw. św. Krzyża w Warszawie<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;first cell-lft&quot;</span><span class="nt">&gt;</span>Ojciec Franciszek<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>14.02.2014<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>19:00<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;last cell-lft&quot;</span><span class="nt">&gt;</span>Góra Kalwaria<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;first cell-lft&quot;</span><span class="nt">&gt;</span>bł. ks. Jerzy Popiełuszko<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>-<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>19:00<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;last cell-lft&quot;</span><span class="nt">&gt;</span>Watykan<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>      </div>
+    </div>
+  </section>
+  <footer>
+    The source code for this style guide is licensed under the MIT license.
+  </footer>
+</div>
+<script>
+$(document).ready(function() {
+
+  // build simple sidebar navigation
+  var $headers = $('.main > h1');
+  var $componentList = $('.componentList');
+
+  $headers.each(function() {
+    var headerText = $(this).text();
+    $(this).attr('id', headerText);
+
+    $componentList.append(
+      '<li><a href="#' + headerText + '">' + headerText + '</a></li>'
+    );
+  });
+
+  // set the active tab
+  var currentHref = document.location.pathname.substr(1);
+  if (currentHref)
+  {
+    $('.docNav').find('a[href^="' + currentHref + '"]').addClass('activeNavElem typeEmphasize');
+  }
+  else
+  {
+    $('.docNav').find('a').eq(0).addClass('activeNavElem typeEmphasize');
+  }
+
+
+});
+</script>
+</body>
+</html>

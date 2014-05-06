@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>My Style Guide UI</title>
+    <link rel="shortcut icon" href="static/brick.png" />
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="static/css/doc.css">
+    <link rel="stylesheet" href="static/css/github.css">
+
+    <!-- CSS to be documented -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <link rel="stylesheet" href="../build/css/screen.css">
+
+    <!-- Main libraries -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+
+    <script src="../../assets/jquery.uniform/jquery.uniform.min.js"></script>
+    <script src="../../assets/select2/select2.min.js"></script>
+    
+    <!-- component js and init scripts -->
+    <script src="../../scripts/main.js"></script>
+
+</head>
+
+  <body>
+    <header class="header pbn" role="banner">
+      <div class="backgroundHighlight typeReversed1">
+        <div class="container">
+          <h1 class="h2 mvs">My Style Guide</h1>
+        </div>
+      </div>
+      <div class="backgroundLowlight typeReversed1">
+        <div class="container">
+          <span>
+            <ul class="docNav listInline">
+              <!-- Add you pages here -->
+              <li><a href="index.html">Intro</a></li>
+              <li><a href="base_css.html">Base CSS</a></li>
+              <li><a href="ui.html">UI</a></li>
+            </ul>
+          </span>
+        </div>
+      </div>
+      <!-- //header/container -->
+    </header>
+
+    <div class="content">
+      <section>
+        <div class="line">
+
+          <div class="col cols4">
+            <div class="componentMenu box boxBasic backgroundBasic">
+              <div class="boxBody pan">
+                <ul class="componentList listBorderedHover">
+                   
+                    <li><a href="#button">Buttony</a></li>
+                   
+                    <li><a href="#inputs">Inputy</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="main col cols20 lastCol example-main">
+
+
+
+<h1 id="button">Buttony</h1>
+
+<p>Styl buttonów może być użyty do znaczników <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input type=&quot;submit&quot;&gt;</code>.
+Poniżej przykład użycia stylu buttona.</p>
+<div class="codeExample"><div class="exampleOutput">  <button class="btn btn-on-white">Click</button>
+</div><div class="codeBlock"><div class="highlight"><pre>  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-on-white&quot;</span><span class="nt">&gt;</span>Click<span class="nt">&lt;/button&gt;</span>
+</pre></div></div></div>
+<h2>Style buttonów</h2>
+
+<p>Style domyślnych buttonów ograniczają się do podanych niżej przykładów:</p>
+
+<table><thead>
+<tr>
+<th>Button</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><button class="btn">Default</button></td>
+<td><code>btn</code></td>
+</tr>
+<tr>
+<td><button class="btn btn-on-white">Cream shadow</button></td>
+<td><code>btn-on-white</code></td>
+</tr>
+<tr>
+<td><div class="example-red"><button class="btn btn-on-red">Overlay shadow</button></div></td>
+<td><code>btn-on-(red, blue, cream)</code></td>
+</tr>
+</tbody></table>
+
+<h2>Buttony specjalne</h2>
+
+<p>Styl dla buttonu specjalnego, na granatowym tle:</p>
+<div class="codeExample"><div class="exampleOutput">    <!-- example background -->
+    <div class="example-blue">
+    <button class="btn-special">Archiwum kampanii</button>
+  </div>
+
+</div><div class="codeBlock"><div class="highlight"><pre>    <span class="c">&lt;!-- example background --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example-blue&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn-special&quot;</span><span class="nt">&gt;</span>Archiwum kampanii<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h2>Button z ikonką</h2>
+
+<p>Styl dla buttonu z ikonką:</p>
+<div class="codeExample"><div class="exampleOutput">    <span class="btn btn-on-white btn-with-icon btn-share"><span>Podziel się artykułem</span><span class="sprite-ico-rarrow"></span></span>
+</div><div class="codeBlock"><div class="highlight"><pre>    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;btn btn-on-white btn-with-icon btn-share&quot;</span><span class="nt">&gt;&lt;span&gt;</span>Podziel się artykułem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;sprite-ico-rarrow&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/span&gt;</span>
+</pre></div></div></div>
+<h2>Rozmiary buttonów</h2>
+
+<p>Są 4 rozmiary buttonów: small, medium, small-long, medium-long.</p>
+
+<table><thead>
+<tr>
+<th>Button</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><button class="btn btn-small btn-on-white">Small</button></td>
+<td><code>btn-small</code></td>
+</tr>
+<tr>
+<td><button class="btn btn-medium btn-on-white">Default</button></td>
+<td><code>btn-medium</code></td>
+</tr>
+<tr>
+<td><button class="btn btn-small btn-long btn-on-white">Small long</button></td>
+<td><code>btn-small btn-long</code></td>
+</tr>
+<tr>
+<td><button class="btn btn-medium btn-long btn-on-white">Medium long</button></td>
+<td><code>btn-small btn-long</code></td>
+</tr>
+</tbody></table>
+
+<h1 id="inputs">Inputy</h1>
+
+<h2>Rodzaje inputów</h2>
+
+<p>Styl dla normalnych inputów.
+<code>Ważne: dla IE8 i innych przeglądarek nieobsługujących inputy HTML5 użyj klasy .input do ostylowania.</code></p>
+
+<table><thead>
+<tr>
+<th>Input</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><input type="text"/></td>
+<td>input selector or <code>input</code></td>
+</tr>
+<tr>
+<td><input type="text" placeholder="Placeholder"/></td>
+<td>::placeholder  or <code>placeholder</code></td>
+</tr>
+</tbody></table>
+
+<h2>Walidacja formularzy</h2>
+
+<p>Styl dla normalnych inputów.
+<code>Ważne: dla IE8 i innych przeglądarek nieobsługujących inputy HTML5 użyj klasy .input do ostylowania.</code></p>
+<div class="codeExample"><div class="exampleOutput">    <!-- Validation: true -->
+  <form class="val-form val-true">
+  <div class="input-wrap">
+  <input type="text" class="input" placeholder="Lorem ipsum dolor sit amet">
+  <span class="val-msg"></span>
+  <button class="input-clear"></button>
+  </div>
+  </form>
+
+    <!-- Validation: false -->
+  <form class="val-form val-false">
+  <div class="input-wrap">
+  <input type="text" class="input" placeholder="Lorem ipsum dolor sit amet">
+  <span class="val-msg">wpisana nazwa jest niepoprawna</span>
+  <button class="input-clear"></button>
+  </div>
+  </form>
+
+    <!-- Validation: alert -->
+  <form class="val-form val-alert">
+  <div class="input-wrap">
+  <input type="text" class="input" placeholder="Lorem ipsum dolor sit amet">
+  <span class="val-msg">nazwa może być już zajęta</span>
+  <button class="input-clear"></button>
+  </div>
+  </form>
+</div><div class="codeBlock"><div class="highlight"><pre>    <span class="c">&lt;!-- Validation: true --&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;val-form val-true&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-wrap&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Lorem ipsum dolor sit amet&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;val-msg&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;input-clear&quot;</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+
+    <span class="c">&lt;!-- Validation: false --&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;val-form val-false&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-wrap&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Lorem ipsum dolor sit amet&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;val-msg&quot;</span><span class="nt">&gt;</span>wpisana nazwa jest niepoprawna<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;input-clear&quot;</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+
+    <span class="c">&lt;!-- Validation: alert --&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;val-form val-alert&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-wrap&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Lorem ipsum dolor sit amet&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;val-msg&quot;</span><span class="nt">&gt;</span>nazwa może być już zajęta<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;input-clear&quot;</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+</pre></div></div></div>
+<h2>Wyszukiwarka</h2>
+
+<p>Styl dla pola wyszukiwarki</p>
+<div class="codeExample"><div class="exampleOutput">  <div class="input-search input-with-icon">
+  <input type="search" placeholder="Jak mogę pomóc"/>
+  <span class="input-search-icon"></span>
+  <button class="input-clear"></button>
+  </div>
+</div><div class="codeBlock"><div class="highlight"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-search input-with-icon&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;search&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Jak mogę pomóc&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-search-icon&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;input-clear&quot;</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h2>Newsletter</h2>
+
+<p>Styl dla pola newslettera</p>
+<div class="codeExample"><div class="exampleOutput">  <div class="input-newsletter input-with-icon">
+  <input type="email" placeholder="Ksiądz biskup"/>
+  <span class="input-email-icon"></span>
+  <button class="input-clear"></button>
+  </div>
+</div><div class="codeBlock"><div class="highlight"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-newsletter input-with-icon&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Ksiądz biskup&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-email-icon&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;input-clear&quot;</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h2>Select dropdown</h2>
+
+<p>Styl dla dropdowna z opcjami</p>
+<div class="codeExample"><div class="exampleOutput">  <select class="select-dropdown">
+        <option value="Nullam">Nullam magna diam</option>
+        <option value="Cras">Cras nonummy auctor metus</option>
+  </select>
+</div><div class="codeBlock"><div class="highlight"><pre>  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select-dropdown&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Nullam&quot;</span><span class="nt">&gt;</span>Nullam magna diam<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Cras&quot;</span><span class="nt">&gt;</span>Cras nonummy auctor metus<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+</pre></div></div></div>
+<h2>Checkboxy i radiobuttony</h2>
+
+<table><thead>
+<tr>
+<th>Input</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><input type="checkbox"/></td>
+<td><code>input[type=checkbox]</code></td>
+</tr>
+<tr>
+<td><input type="radio" value="radio1"/></td>
+<td><code>input[type=radiobutton]</code></td>
+</tr>
+</tbody></table>
+
+<h2>Checkboxy i radiobuttony z opisami</h2>
+
+<table><thead>
+<tr>
+<th>Input</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><label class="check-label"><input type="checkbox">Ksiądz biskup</label></td>
+<td><code>check-label</code></td>
+</tr>
+<tr>
+<td><label class="check-label"><input type="radio">Ksiądz biskup</label></td>
+<td><code>check-label</code></td>
+</tr>
+</tbody></table>
+      </div>
+    </div>
+  </section>
+  <footer>
+    The source code for this style guide is licensed under the MIT license.
+  </footer>
+</div>
+<script>
+$(document).ready(function() {
+
+  // build simple sidebar navigation
+  var $headers = $('.main > h1');
+  var $componentList = $('.componentList');
+
+  $headers.each(function() {
+    var headerText = $(this).text();
+    $(this).attr('id', headerText);
+
+    $componentList.append(
+      '<li><a href="#' + headerText + '">' + headerText + '</a></li>'
+    );
+  });
+
+  // set the active tab
+  var currentHref = document.location.pathname.substr(1);
+  if (currentHref)
+  {
+    $('.docNav').find('a[href^="' + currentHref + '"]').addClass('activeNavElem typeEmphasize');
+  }
+  else
+  {
+    $('.docNav').find('a').eq(0).addClass('activeNavElem typeEmphasize');
+  }
+
+
+});
+</script>
+</body>
+</html>

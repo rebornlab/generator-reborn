@@ -1,0 +1,80 @@
+/*
+*  ============================
+*
+*    [Table of contents]
+*
+*    1. Buttons base
+*    2. Button classes
+*
+*  ============================
+*/
+
+//=============================
+//	[1. Button base]
+//=============================
+
+// *** Button variables ***
+$btn-radius: 4px;
+$btn-font-weight: 400;
+$btn-height: 40px;
+$btn-padding: 40px;
+
+$btn-base-size: 50px;
+$btn-multiplier: 1.2;
+
+$btn-sizes: tiny, small, medium, large;
+
+// *** Button mixins ***
+@mixin btn-base($display: inline-block, $width: $btn-padding, $height: $btn-height, $radius: $btn-radius, $weight: $btn-font-weight) {
+  display: $display;
+  padding: 0 $btn-padding;
+  border-radius: $radius;
+  font-weight: $weight;
+  cursor: pointer;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  line-height: $height;
+}
+
+@mixin btn-with-icon($align: center, $icon-height: null, $height: $btn-height) {
+  span,
+  input,
+  a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  @if $align == opposite {
+    span:first-child,
+    input,
+    a {
+      float: left;
+    }
+    span + span {
+      float: right;
+      margin-top: ($btn-height - $icon-height) / 2;
+    }
+  }
+}
+
+//=============================
+//	[2. Button classes]
+//=============================
+
+// *** Button main clasess ***
+.btn {
+  @include btn-base;
+}
+
+.btn-with-icon {
+  @include btn-with-icon;
+}
+
+// *** Buttons sizes ***
+
+// increase button width by $btn-multiplier
+@for $i from 1 through length($btn-sizes) {
+    .btn-#{nth($btn-sizes, $i)} {
+      width: $btn-base-size * ($btn-multiplier * $i);
+    }
+}

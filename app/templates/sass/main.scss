@@ -1,0 +1,71 @@
+/*                                    
+*  ===========================
+*     _   _  _   _   _
+*		 |_˩ |_ |_˩ | | |_˩ |\ |
+*    | \ |_ |_˥ |_| | \ | \|
+*     
+*      -- CREATIVE LAB --
+*
+*  ===========================
+*
+*
+*  Project: Reborn blank
+*  Tags: project base, grid, responsive, custom mixins
+*  Version: 0.1.1
+*  Last change: 16/03/2014
+*  
+*/
+
+//============================
+//	[1. Base]
+//============================
+
+@import "base/fonts",
+				"base/normalize",
+				"base/colors",
+				"base/typography",
+				"base/core";
+
+// TIP: uncomment if you decided to build normal site
+// @import "base/grid";
+
+//============================
+//	[2. Vendor]
+//============================
+
+// TIP: uncomment if vendor sass is included
+// for Foundation:
+// @import "vendor/foundation";
+
+// for Bootstrap:
+// @import "vendor/bootstrap";
+
+
+//============================
+//	[3. UI]
+//============================
+
+@import "ui/sprites",
+				"ui/buttons",
+				"ui/forms",
+				"ui/menus",
+				"ui/tables";
+
+//============================
+//	[4. Partials]
+//============================
+
+@import "partials/header",
+				"partials/footer";
+
+//============================
+//	[6. Components]
+//============================
+
+// @import "components/"
+
+//============================
+//	[7. Templates]
+//============================
+
+@import "templates/home";
