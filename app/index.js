@@ -34,6 +34,7 @@ var RebornGenerator = yeoman.generators.Base.extend({
     }.bind(this));
   },
   installDevDep: function() {
+    this.copy('_.gitignore', '.gitignore');
     this.copy('Gruntfile.js', 'Gruntfile.js');
     this.copy('_package.json', 'package.json');
     this.copy('_.bowerrc', '.bowerrc');
