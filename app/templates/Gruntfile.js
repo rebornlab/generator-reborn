@@ -112,7 +112,7 @@ module.exports = function(grunt) {
         reporter: require('jshint-stylish'),
         force: true
       },
-      all: ['Gruntfile.js', '<%= globalDir.dev %>/scripts/{,*/}*.js', '!<%= globalDir.dev %>/scripts/vendor/*', 'test/spec/{,*/}*.js']
+      all: ['Gruntfile.js', '<%= globalDir.dev %>/scripts/{,*/}*.js', '!<%= globalDir.dev %>/scripts/vendor/*']
     },
     /**
      *
@@ -253,7 +253,6 @@ module.exports = function(grunt) {
     // DESC: Run some tasks in parallel to speed up build process
     concurrent: {
       dev: ['htmlbuild:dev', 'sass:dev'],
-      test: ['copy:styles'],
       prod: ['copy:prod', 'sass:prod', 'imagemin', 'svgmin'],
       postProd: ['replace:html', 'replace:css', 'replace:js']
     },
@@ -270,10 +269,6 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         }
-      },
-      jstest: {
-        files: ['test/spec/{,*/}*.js'],
-        tasks: ['test:watch']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -315,12 +310,6 @@ module.exports = function(grunt) {
           base: ['.tmp', '<%= globalDir.dev %>']
         }
       },
-      test: {
-        options: {
-          port: 9001,
-          base: ['.tmp', 'test', '<%= globalDir.dev %>']
-        }
-      },
       dev: {
         options: {
           open: true,
@@ -352,15 +341,8 @@ module.exports = function(grunt) {
     }
     grunt.task.run(['clean:dev', 'concurrent:dev', 'connect:livereload', 'watch']);
   });
-  // DESC: grunt test
-  grunt.registerTask('test', function(target) {
-    if (target !== 'watch') {
-      grunt.task.run(['clean:dev', 'concurrent:test', ]);
-    }
-    grunt.task.run(['connect:test', 'mocha']);
-  });
   // DESC: grunt build
   grunt.registerTask('build', ['clean:prod', 'htmlbuild:dev', 'useminPrepare', 'concurrent:prod', 'concat', 'cssmin', 'uglify', 'usemin', 'concurrent:postProd']);
   // DESC: grunt default task
-  grunt.registerTask('default', ['newer:jshint', 'test', 'build']);
+  grunt.registerTask('default', ['newer:jshint', 'build']);
 };
