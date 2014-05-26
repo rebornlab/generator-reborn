@@ -1,6 +1,6 @@
 {
   "name": "generator-reborn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generator for custom site build. Made by Reborn - Creative Lab",
   "license": "MIT",
   "main": "app/index.js",
