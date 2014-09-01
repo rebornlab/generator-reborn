@@ -25,6 +25,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+  grunt.loadNpmTasks('assemble');
   // Define the configuration for all the tasks
   grunt.initConfig({
     /**
@@ -64,18 +65,35 @@ module.exports = function(grunt) {
       }
     },
     // DESC: includes partials
-    htmlbuild: {
+    assemble: {
       options: {
-        sections: {
-          header: '<%= globalDir.dev %>/partials/header.html',
-          footer: '<%= globalDir.dev %>/partials/footer.html'
-        }
+        layoutdir: '<%= globalDir.dev %>/layouts',
+        partials: '<%= globalDir.dev %>/partials/**/*.hbs',
+        flatten: true,
+        ext: '.html'
       },
       dev: {
-        src: '<%= globalDir.dev %>/layouts/*.html',
-        dest: '<%= globalDir.dev %>/'
+        files: {
+          '<%= globalDir.dev %>/': ['<%= globalDir.dev %>/pages/*.hbs']
+        }
       }
     },
+    /**
+     * [DEPRECATED]
+     */
+    // DESC: includes partials
+    // htmlbuild: {
+    //   options: {
+    //     sections: {
+    //       header: '<%= globalDir.dev %>/partials/header.html',
+    //       footer: '<%= globalDir.dev %>/partials/footer.html'
+    //     }
+    //   },
+    //   dev: {
+    //     src: '<%= globalDir.dev %>/layouts/*.html',
+    //     dest: '<%= globalDir.dev %>/'
+    //   }
+    // },
     /**
      *
      *   CSS
@@ -252,7 +270,7 @@ module.exports = function(grunt) {
      */
     // DESC: Run some tasks in parallel to speed up build process
     concurrent: {
-      dev: ['htmlbuild:dev', 'sass:dev'],
+      dev: ['assemble', 'sass:dev'],
       prod: ['copy:prod', 'sass:prod', 'imagemin', 'svgmin'],
       postProd: ['replace:html', 'replace:css', 'replace:js']
     },
@@ -282,8 +300,8 @@ module.exports = function(grunt) {
         }
       },
       html: {
-        files: ['<%= globalDir.dev %>/layouts/*.html', '<%= globalDir.dev %>/partials/*.html'],
-        tasks: ['htmlbuild:dev'],
+        files: ['<%= globalDir.dev %>/layouts/*.hbs', '<%= globalDir.dev %>/partials/*.hbs'],
+        tasks: ['assemble'],
         options: {
           livereload: true
         }
@@ -335,14 +353,9 @@ module.exports = function(grunt) {
    *
    */
   // DESC: grunt serve
-  grunt.registerTask('serve', function(target) {
-    if (target === 'dev') {
-      return grunt.task.run(['build', 'connect:dev:keepalive']);
-    }
-    grunt.task.run(['clean:dev', 'concurrent:dev', 'connect:livereload', 'watch']);
-  });
+  grunt.registerTask('serve', ['clean:dev', 'assemble', 'sass:dev', 'connect:livereload', 'watch']);
   // DESC: grunt build
-  grunt.registerTask('build', ['clean:prod', 'htmlbuild:dev', 'useminPrepare', 'concurrent:prod', 'concat', 'cssmin', 'uglify', 'usemin', 'concurrent:postProd']);
+  grunt.registerTask('build', ['clean:prod', 'assemble', 'useminPrepare', 'concurrent:prod', 'concat', 'cssmin', 'uglify', 'usemin', 'concurrent:postProd']);
   // DESC: grunt default task
   grunt.registerTask('default', ['newer:jshint', 'build']);
 };
