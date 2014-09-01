@@ -51,6 +51,7 @@ var RebornGenerator = yeoman.generators.Base.extend({
     this.copy('robots.txt', 'dev/robots.txt');
     this.copy('sprites.mustache', 'sprites.mustache');
     // directories
+    this.directory('pages', 'dev/pages');
     this.directory('layouts', 'dev/layouts');
     this.directory('partials', 'dev/partials');
     this.directory('_fonts', 'dev/_fonts');
