@@ -300,7 +300,7 @@ module.exports = function(grunt) {
         }
       },
       html: {
-        files: ['<%= globalDir.dev %>/layouts/*.hbs', '<%= globalDir.dev %>/partials/*.hbs'],
+        files: ['<%= globalDir.dev %>/layouts/*.hbs', '<%= globalDir.dev %>/partials/*.hbs', '<%= globalDir.dev %>/pages/*.hbs'],
         tasks: ['assemble'],
         options: {
           livereload: true
