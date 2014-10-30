@@ -59,7 +59,7 @@ var RebornGenerator = yeoman.generators.Base.extend({
     this.directory('scripts', 'dev/scripts');
     this.directory('images', 'dev/images');
     this.directory('test', 'dev/test');
-    this.directory('styleguide', 'dev/styleguide');
+    // this.directory('styleguide', 'dev/styleguide');
   },
   projectfiles: function() {
     this.copy('editorconfig', '.editorconfig');
