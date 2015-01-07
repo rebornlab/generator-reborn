@@ -22,7 +22,7 @@ body {
 }
 
 body {
-  background: $normal-white;
+  background: $white;
   font: 15px/1.33em 'klavika', Arial, sans-serif;
   font-weight: 300;
   color: $light-gray;
@@ -41,7 +41,7 @@ body {
   box-sizing: border-box;
 }
 
-#wrapper {
+.wrapper {
   min-height: 100%;
   position: relative;
 }
