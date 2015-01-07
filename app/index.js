@@ -86,7 +86,7 @@ var RebornGenerator = yeoman.generators.Base.extend({
     }
 
     var packages = {
-      bootstrap: 'bootstrap-sass',
+      bootstrap: 'bootstrap-sass-official',
       foundation: 'foundation'
     };
     var framework = this.frameworkType.toLowerCase();
