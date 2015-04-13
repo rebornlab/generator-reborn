@@ -1,9 +1,9 @@
-/*                                    
+/*
 *  ===========================
 *     _   _  _   _   _
 *		 |_˩ |_ |_˩ | | |_˩ |\ |
 *    | \ |_ |_˥ |_| | \ | \|
-*     
+*
 *      -- CREATIVE LAB --
 *
 *  ===========================
@@ -11,9 +11,9 @@
 *
 *  Project: Reborn blank
 *  Tags: project base, grid, responsive, custom mixins
-*  Version: 0.1.2
-*  Last change: 30/10/2014
-*  
+*  Version: 0.1.3
+*  Last change: 13/04/2015
+*
 */
 
 //============================
@@ -21,24 +21,16 @@
 //============================
 
 // *** CSS frameworks ***
-// DESC: CSS framworks are imported at the beginning of document
+// DESC: CSS frameworks are imported at the beginning of document
 // to make their mixins and variables accessible for base styles
 
-// TIP: uncomment if vendor sass is included
-// for Foundation:
-// @import "vendor/foundation";
-
-// for Bootstrap:
-// @import "vendor/bootstrap";
+// FRAMEWORK REPLACE
 
 @import "base/fonts";
 @import "base/normalize";
 @import "base/colors";
 @import "base/typography";
 @import "base/core";
-
-// TIP: uncomment if you decided to build normal site
-// @import "base/grid";
 
 //============================
 //	[2. Vendor]

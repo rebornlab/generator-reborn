@@ -5,7 +5,6 @@
 *
 *    1. Color palette
 *    2. Primary palette
-*    3. Gradient function
 *
 *  ============================
 */
@@ -34,25 +33,3 @@
 $white: #fff;
 $light-gray: #a8a8a8;
 $dark-gray: #353535;
-
-//=============================
-//	[3. Gradient function]
-//
-//  @source: 
-//  http://bit.ly/1e7uBDD
-//
-//=============================
-
-@function linear-gradient($pos, $gradients...) {
-  $type: linear;
-  $pos-type: type-of(nth($pos, 1));
-
-  // if $pos doesn't exist, fix $gradient
-  @if ($pos-type == color) or (nth($pos, 1) == "transparent")  {
-    $gradients: zip($pos $gradients);
-    $pos: false;
-  }
-
-  $type-gradient: $type, $pos, $gradients;
-  @return $type-gradient;
-}
